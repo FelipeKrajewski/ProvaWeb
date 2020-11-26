@@ -1,0 +1,33 @@
+<div class="container">
+    <h1 class="mt-4">Produtos</h1>
+
+    <button class="float-right mb-3"  mat-raised-button color="primary"(click) ="navigateToCreateProduct() ">
+        Cadastrar Produto
+    </button>
+
+    <table mat-table [dataSource]="produtos" style="width:100%">
+        <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef> Nome </th>
+            <td mat-cell *matCellDef="let x"> {{x.nome}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="codigoBarras">
+            <th mat-header-cell *matHeaderCellDef> Código de Barras </th>
+            <td mat-cell *matCellDef="let x"> {{x.codigoBarras}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="preco">
+            <th mat-header-cell *matHeaderCellDef> Preço </th>
+            <td mat-cell *matCellDef="let x"> {{x.preco}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="criadoEm">
+            <th mat-header-cell *matHeaderCellDef> Crieado em </th>
+            <td mat-cell *matCellDef="let x"> {{x.CriadoEm | date: "yyyy"}} </td>
+        </ng-container>
+       
+        <tr mat-header-row *matHeaderRowDef="xColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: xColumns;"></tr>
+
+    </table>
+</div>

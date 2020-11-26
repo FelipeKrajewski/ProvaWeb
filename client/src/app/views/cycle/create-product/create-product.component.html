@@ -1,0 +1,32 @@
+
+
+<div class="container example-container" id ="cadastrar">
+    <b><h2> CADASTTRAR PRODUTO</h2></b>
+        <mat-form-field appearance="fill" class="inputs">
+            <mat-label>Nome</mat-label>
+            <input matInput name="nome" id="nome" [(ngModel)] = "produto.nome" required>
+        </mat-form-field><br>
+
+        <mat-form-field appearance="fill" class="inputs">
+            <mat-label>Código de Barras</mat-label>
+            <input matInput name="codigoBarras" id="codigoBarras" [(ngModel)] = "produto.codigoBarras"  required>
+        </mat-form-field><br>
+
+        <mat-form-field appearance="fill" class="inputs">
+            <mat-label>Preço</mat-label>
+            <input matInput name="preco" id="preco" [(ngModel)] = "produto.preco"  required>
+        </mat-form-field><br>
+
+       <!-- <mat-form-field appearance="fill" class="inputs">
+            <mat-label>Criado em</mat-label>
+            <input matInput type="date" name="anoPublicacao" id="anoPublicacao" [(ngModel)]="book.anoPublicacao" required>
+        </mat-form-field><br>-->
+
+        <button   class="float-left mb-3" (click)="create( )" mat-raised-button color="primary"class="botaoAcao">
+            Cadastrar
+        </button>
+
+</div>
+
+
+
